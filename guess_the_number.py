@@ -1,0 +1,81 @@
+import random
+
+from termcolor import colored
+
+
+def welcome():
+
+    """Welcome new user and explain rules of the game"""
+
+    print(colored("Hello there \U0001F60A, Welcome to Guess the Number game", "green"))
+    print()
+    print(
+        "In this game you have to guess a number and you will have total 5 chances to guess it correct"
+    )
+
+
+def user_input():
+
+    """Ask user to guess a number, if input is valid digit then return the user_input"""
+
+    user_number = input("Guess a number: ")
+    try:
+        user_number = int(user_number)
+    except:
+        print("Please ender a valid digit!")
+        user_input()
+    else:
+        if user_number < 0:
+            print("You need to enter a digit between 0 and 50")
+            main()
+        else:
+            return user_number
+
+
+def success(count: int):
+
+    """Print the sucess message when user guess the correct number"""
+
+    positions = ["1st", "2nd", "3rd", "4th", "5th"]
+    print(f"Wow!\U0001F929, you have won the game in {positions[count-1]} try")
+
+
+def playagain():
+
+    """Ask user if he/she wants to play again or not"""
+
+    if input("Would you like to play again (Yes/No)? ").lower().startswith("y"):
+        main()
+    else:
+        print("Leaving soon, we will miss you", "\U0001F97A")
+
+
+def main():
+    welcome()
+    # number = random.randint(0, 50)
+    number = 78
+    count = 0
+    COUNT = 5
+    while count < COUNT:
+        user_number = user_input()
+
+        count += 1
+        if user_number == number:
+            success(count)
+            playagain()
+            break
+        elif user_number < number:
+            print(colored("Your number is smaller than mine, ", "red"))
+        else:
+            print("Number is greater")
+
+        if count == COUNT:
+            print("You have exhausted all the chances, better luck next time.")
+            playagain()
+
+
+if __name__ == "__main__":
+    main()
+
+
+# Made with Love by Paras Gupta
