@@ -8,9 +8,11 @@ def welcome():
     """Welcome new user and explain rules of the game"""
 
     print(colored("Hello there \U0001F60A, Welcome to Guess the Number game", "green"))
-    print()
+    print("Game Rule -> ")
     print(
         "In this game you have to guess a number and you will have total 5 chances to guess it correct"
+        "\n"
+        "You guess should be in between 0 and 50"
     )
 
 
@@ -37,7 +39,12 @@ def success(count: int):
     """Print the sucess message when user guess the correct number"""
 
     positions = ["1st", "2nd", "3rd", "4th", "5th"]
-    print(f"Wow!\U0001F929, you have won the game in {positions[count-1]} try")
+    print(
+        colored(
+            f"Wow!\U0001F929, you have won the game in {positions[count-1]} try",
+            "green",
+        )
+    )
 
 
 def playagain():
@@ -52,8 +59,8 @@ def playagain():
 
 def main():
     welcome()
-    # number = random.randint(0, 50)
-    number = 78
+    number = random.randint(0, 50)
+    # number = 78    # used while testing
     count = 0
     COUNT = 5
     while count < COUNT:
@@ -65,9 +72,9 @@ def main():
             playagain()
             break
         elif user_number < number:
-            print(colored("Your number is smaller than mine, ", "red"))
+            print(colored("Number is too small", "red"))
         else:
-            print("Number is greater")
+            print(colored("Number is too big", "red"))
 
         if count == COUNT:
             print("You have exhausted all the chances, better luck next time.")
