@@ -16,4 +16,4 @@ $ git clone https://github.com/g-paras/python-games.git
 $ python3 guess_the_number.py
 ```
 
-![Guess the number](./img/guess_number.png)
+![Guess the number](./img/number_guess.png)
