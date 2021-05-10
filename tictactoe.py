@@ -43,8 +43,30 @@ def player_win(board: list, player: str) -> bool:
     )
 
 
-def is_free(board: list, x: int, y: int) -> bool:
-    pass
+def is_free(board: list, pos: int) -> bool:
+    if 0 <= pos <= 8:
+        return not board[pos]
+    return False
+
+
+def user_input():
+    move = input("Make your move (0-8) ")
+    try:
+        move = int(move)
+    except:
+        print("Please enter a valid digit")
+        return user_input()
+    else:
+        if 0 <= move <= 8:
+            return move
+        print("Your move should be within [0, 8]")
+        return user_input()
+
+
+def make_move(board: list, player: str) -> None:
+    pos = user_input()
+    if is_free(board, pos):
+        pass
 
 
 def main():
@@ -55,4 +77,7 @@ def main():
 
 if __name__ == "__main__":
     # work in progress, not completed yet
+    print("Welcome to Tic Tac Toe by Paras Gupta")
+    print("Sample board")
+    draw_board(range(9))
     main()
