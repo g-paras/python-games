@@ -12,7 +12,7 @@ def welcome():
     print(
         "In this game you have to guess a number and you will have total 5 chances to guess it correct"
         "\n"
-        "You guess should be in between 0 and 50"
+        "You guess should be in between 1 and 25"
     )
 
 
@@ -25,13 +25,13 @@ def user_input():
         user_number = int(user_number)
     except:
         print("Please ender a valid digit!")
-        user_input()
+        return user_input()
     else:
-        if user_number < 0:
-            print("You need to enter a digit between 0 and 50")
-            main()
-        else:
+        if 1 <= user_number <= 25:
             return user_number
+        else:
+            print("You need to enter a digit between 0 and 50")
+            return user_input()
 
 
 def success(count: int):
@@ -55,11 +55,12 @@ def playagain():
         main()
     else:
         print("Leaving soon, we will miss you", "\U0001F97A")
+        print(colored("Thanks for playing, Made with \u2665 by g-paras", "blue"))
 
 
 def main():
     welcome()
-    number = random.randint(0, 50)
+    number = random.randint(1, 25)
     # number = 78    # used while testing
     count = 0
     COUNT = 5
@@ -83,6 +84,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# Made with Love by Paras Gupta
