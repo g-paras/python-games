@@ -4,9 +4,7 @@ from termcolor import colored
 
 
 def welcome():
-
     """Welcome new user and explain rules of the game"""
-
     print(colored("Hello there \U0001F60A, Welcome to Guess the Number game", "green"))
     print("Game Rule -> ")
     print(
@@ -17,9 +15,7 @@ def welcome():
 
 
 def user_input():
-
     """Ask user to guess a number, if input is valid digit then return the user_input"""
-
     user_number = input("Guess a number: ")
     try:
         user_number = int(user_number)
@@ -35,9 +31,7 @@ def user_input():
 
 
 def success(count: int):
-
     """Print the sucess message when user guess the correct number"""
-
     positions = ["1st", "2nd", "3rd", "4th", "5th"]
     print(
         colored(
@@ -48,9 +42,7 @@ def success(count: int):
 
 
 def playagain():
-
     """Ask user if he/she wants to play again or not"""
-
     if input("Would you like to play again (Yes/No)? ").lower().startswith("y"):
         main()
     else:
@@ -61,10 +53,10 @@ def playagain():
 def main():
     welcome()
     number = random.randint(1, 25)
-    # number = 78    # used while testing
+    # number = 18    # used while testing
     count = 0
-    COUNT = 5
-    while count < COUNT:
+    MAX_COUNT = 5
+    while count < MAX_COUNT:
         user_number = user_input()
 
         count += 1
@@ -77,7 +69,7 @@ def main():
         else:
             print(colored("Number is too big", "red"))
 
-        if count == COUNT:
+        if count == MAX_COUNT:
             print("You have exhausted all the chances, better luck next time.")
             playagain()
 
