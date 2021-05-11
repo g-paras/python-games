@@ -11,8 +11,9 @@ markers = [
 
 
 def welcome():
+    """Function to welcome new player"""
     print("Welcome to TicTacToe")
-    print("Here is a sample board,\nremeber the positions of board")
+    print("Here is a sample board,\nremember the positions of board")
     draw_board([" 0", "1", "2", " 3", "4", "5", " 6", "7", "8"])
 
 
@@ -26,6 +27,7 @@ def draw_board(board: list) -> None:
 
 
 def choose_marker():
+    """ask user to choose his/her marker"""
     options = choice(markers)
     print("Choose your marker 1.{} 2.{}:".format(*options), end=" ")
     marker = input()
@@ -78,6 +80,7 @@ def who_first():
 
 
 def user_input(board):
+    """promt user to enter next move, then check is that number is valid and that position is free, if yes the return the position"""
     move = input("Make your move (0-8) ")
     try:
         move = int(move)
@@ -106,6 +109,7 @@ def board_copy(board):
 
 
 def available_positions(board):
+    """return all the available positions"""
     return [i for i in range(9) if board[i] == "  "]
 
 
@@ -135,6 +139,7 @@ def computer_move(board: list, computer: str, player: str) -> None:
 
 
 def main():
+    """main function to play game"""
     welcome()
     board = ["  "] * 9
     (player, computer) = choose_marker()
