@@ -135,6 +135,7 @@ def main():
         display_board(HANGMAN, missed_letter, correct_letter, answer)
 
         if len(missed_letter) == 6:
+            print("Correct answer is", answer)
             print("You lost, better luck next time \U0001F92A")
             if playagain():
                 return main()
