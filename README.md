@@ -20,19 +20,7 @@ pip install -r requirements.txt
 3. Start Game
 
 ```bash
-python3 guess_the_number.py
-```
-
-or
-
-```bash
-python3 tictactoe.py
-```
-
-or
-
-```bash
-python3 RockPaperScissor.py
+python3 <file-name>.py
 ```
 
 ### Sample play of Number Guess game
