@@ -1,5 +1,6 @@
 import random
 from string import ascii_lowercase as letters
+import pyfiglet
 
 HANGMAN = [
     r"""
@@ -72,11 +73,23 @@ riddles = {
 
 
 def get_random_riddle(riddles):
-    return random.choice(riddles.items())
+    return random.choice(list(riddles.items()))
 
 
 def display_board(HANGMAN, missed_letter, correct_letter, actual_word):
-    pass
+    print(HANGMAN[len(missed_letter)])
+    print("Missed Letters:", "".join(missed_letter))
+
+    print("Correct Letters: ", end="")
+    # for i in actual_word:
+    #     if i in correct_letter:
+    #         print(i, end="")
+    #     else:
+    #         print("_", end="")
+    # print()
+
+    # or using list comprehension
+    print("".join([i if i in correct_letter else "_" for i in actual_word]))
 
 
 def get_guess(already_guessed):
@@ -97,11 +110,42 @@ def get_guess(already_guessed):
 
 
 def playagain():
-    return input("Would you like to play again (Yes/No)?").lower().startswith("y")
+    return input("Would you like to play again (Yes/No)? ").lower().startswith("y")
+
+
+def guessed_all(correct_letter, actual_answer):
+    for i in actual_answer:
+        if not i in correct_letter:
+            return False
+    return True
 
 
 def main():
-    pass
+    pyfiglet.print_figlet("HANGMAN")
+    correct_letter = []
+    missed_letter = []
+    riddle, answer = get_random_riddle(riddles)
+    print(riddle)
+    while True:
+        guess = get_guess(correct_letter + missed_letter)
+        if guess in answer:
+            correct_letter.append(guess)
+        else:
+            missed_letter.append(guess)
+        display_board(HANGMAN, missed_letter, correct_letter, answer)
+
+        if len(missed_letter) == 6:
+            print("You lost, better luck next time \U0001F92A")
+            if playagain():
+                return main()
+            return
+
+        elif guessed_all(correct_letter, answer):
+            print("Correct answer is", answer)
+            print("You got the answer, you won \U0001F973")
+            if playagain():
+                return main()
+            return
 
 
 if __name__ == "__main__":
