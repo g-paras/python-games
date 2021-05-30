@@ -35,6 +35,7 @@ There are a total of 5 games in this repository, all of them are beginner lever 
 
 - `termcolor` : for printing colored text in console
 - `pyfiglet` : for ascii-art
+- `PyInquirer` : interactive command line interface
 
 #### Dependencies
 
