@@ -1,4 +1,4 @@
-## Command Line Interface Python Games
+# Command Line Interface Python Games
 
 Collection of some starter python game projects
 
