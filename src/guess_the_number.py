@@ -1,6 +1,6 @@
 import random
 
-from termcolor import colored
+from tinge import colored
 
 
 def welcome():

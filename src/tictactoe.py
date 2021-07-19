@@ -1,5 +1,5 @@
 from random import randint, choices, choice
-from termcolor import colored
+from tinge import colored
 
 # different marker for board to make it look interesting
 markers = [
