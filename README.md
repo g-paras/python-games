@@ -33,7 +33,7 @@ There are a total of 5 games in this repository, all of them are beginner lever 
 
 #### Two additional modules are also used in this.
 
-- `termcolor` : for printing colored text in console
+- `tinge` : for printing colored text in console
 - `pyfiglet` : for ascii-art
 - `PyInquirer` : interactive command line interface
 
@@ -50,7 +50,7 @@ PyInquirer     1.0.3
 regex          2021.4.4
 setuptools     56.0.0
 six            1.16.0
-termcolor      1.1.0
+tinge          0.0.2
 wcwidth        0.2.5
 wheel          0.36.2
 ```
