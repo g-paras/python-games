@@ -12,6 +12,7 @@ question = [
             "Number Guess",
             "Tic Tac Toe",
             "Hangman",
+            "Minesweeper"
         ],
     }
 ]
@@ -33,6 +34,9 @@ elif answer == "Tic Tac Toe":
     from src.tictactoe import main
     main()
 
+elif answer == "Minesweeper":
+    from src.minesweeper import main
+    main()
 else:
     from src.hangman import main
     main()
