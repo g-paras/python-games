@@ -1,6 +1,6 @@
 # Command Line Interface Python Games
 
-Collection of some starter python game projects
+Collection of some starter python game projects for beginners
 
 ### How to play these games
 
