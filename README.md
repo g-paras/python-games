@@ -54,3 +54,12 @@ tinge          0.0.2
 wcwidth        0.2.5
 wheel          0.36.2
 ```
+
+## Contributors
+<a href="https://github.com/g-paras"><img src="https://avatars.githubusercontent.com/u/60445527?s=400&u=f9e293eccb9675d129d66e76ef62d66d328c39a9&v=4" height="30" width="30" style="border-radius:50%;" /></a>
+<a href="https://github.com/PrernaPandeykp"><img src="https://avatars.githubusercontent.com/u/66163199?v=4" height="30" width="30" style="border-radius:50%;" /></a>
+<a href="https://github.com/twozero88"><img src="https://avatars.githubusercontent.com/u/44749717?v=4" height="30" width="30" style="border-radius:50%;" /></a>
+<a href="https://github.com/Arsh069"><img src="https://avatars.githubusercontent.com/u/65395355?v=4" height="30" width="30" style="border-radius:50%;" /></a>
+<a href="https://github.com/knagar06"><img src="https://avatars.githubusercontent.com/u/65702795?v=4" height="30" width="30" style="border-radius:50%;" /></a>
+<a href="https://github.com/gsanchit01"><img src="https://avatars.githubusercontent.com/u/70408013?v=4" height="30" width="30" style="border-radius:50%;" /></a>
+<a href="https://github.com/insaneprasun251"><img src="https://avatars.githubusercontent.com/u/72152148?v=4" height="30" width="30" style="border-radius:50%;" /></a>
