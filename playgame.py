@@ -37,6 +37,11 @@ elif answer == "Tic Tac Toe":
 elif answer == "Minesweeper":
     from src.minesweeper import main
     main()
+    
+elif answer == "The Chase"
+    from src.the_chase_trivia import main
+    main()
+    
 else:
     from src.hangman import main
     main()
