@@ -23,6 +23,20 @@ pip install -r requirements.txt
 python3 playgame.py
 ```
 
+### Games avaliable:
+  
+- Dragon Realm - Stay clear of the Greedy and Hungry Dragon
+
+- Rock Paper Scissor - Choose an option to defeat you opponent
+
+- Number Guess - Guess a number between 1 and 25
+
+- Tic Tac Toe - Defeat you opponent with O and X
+
+- Hangman - Guess the word before time runs out
+
+- Minesweeper - Find the Mines
+
 ### Sample play of Number Guess game
 
 ![Guess the number](./img/playgames.png)
@@ -56,6 +70,7 @@ wheel          0.36.2
 ```
 
 ## Contributors
+
 <a href="https://github.com/g-paras"><img src="https://avatars.githubusercontent.com/u/60445527?s=400&u=f9e293eccb9675d129d66e76ef62d66d328c39a9&v=4" height="30" width="30" style="border-radius:50%;" /></a>
 <a href="https://github.com/PrernaPandeykp"><img src="https://avatars.githubusercontent.com/u/66163199?v=4" height="30" width="30" style="border-radius:50%;" /></a>
 <a href="https://github.com/twozero88"><img src="https://avatars.githubusercontent.com/u/44749717?v=4" height="30" width="30" style="border-radius:50%;" /></a>
@@ -63,3 +78,4 @@ wheel          0.36.2
 <a href="https://github.com/knagar06"><img src="https://avatars.githubusercontent.com/u/65702795?v=4" height="30" width="30" style="border-radius:50%;" /></a>
 <a href="https://github.com/gsanchit01"><img src="https://avatars.githubusercontent.com/u/70408013?v=4" height="30" width="30" style="border-radius:50%;" /></a>
 <a href="https://github.com/insaneprasun251"><img src="https://avatars.githubusercontent.com/u/72152148?v=4" height="30" width="30" style="border-radius:50%;" /></a>
+<a href="https://github.com/herepete"><img src="https://avatars.githubusercontent.com/herepete" height="30" width="30" style="border-radius:50%;" /></a>
